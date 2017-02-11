@@ -10,3 +10,4 @@ require('./service/map-service.js');
 
 require('./component/adventure/adventure.js');
 require('./component/dashboard/dashboard.js');
+require('./component/history/history.js');
