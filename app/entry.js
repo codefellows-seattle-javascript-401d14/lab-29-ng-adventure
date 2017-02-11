@@ -9,3 +9,4 @@ angular.module('resloveAdventureApp', []);
 require('./service/map-service.js');
 
 require('./component/adventure/adventure.js');
+require('./component/dashboard/dashboard.js');
