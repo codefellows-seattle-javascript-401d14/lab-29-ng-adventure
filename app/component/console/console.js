@@ -9,6 +9,11 @@ require('angular').module('museumApp')
       this.visitor = visitorService;
       this.direction = '';
       console.log('lulwat');
+
+      this.handleSubmit = () => {
+        this.visitor.move(this.direction);
+        this.direction = '';
+      }
     };
   }],
 });

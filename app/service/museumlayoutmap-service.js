@@ -4,7 +4,6 @@ const angular = require('angular');
 
 angular.module('museumApp')
 .service('mapLayout', function (){
-
   let map = {};
 
   let roomA = 'Lobby';

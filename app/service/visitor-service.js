@@ -4,15 +4,16 @@ const angular = require('angular');
 
 angular.module('museumApp')
 .service('visitorService', ['$window', 'mapLayout', function ($window, mapLayout){
-  let saveState = (visitor) => {
+  let saveState = (visitor)  => {
     try{
-      $window.localStorage.visitor = JSON.strigify(visitor);
+      $window.localStorage.visitor = JSON.stringify(visitor);
     } catch(e){ }
   };
 
   let getState = () => {
     try {
       let result = JSON.parse($window.localStorage.visitor);
+      if(!result) throw new Error('nothing found');
       return result;
     } catch(e) {
       return {};
@@ -45,7 +46,7 @@ angular.module('museumApp')
       });
     }
     console.log('history', visitor.history);
-    saveState();
+    saveState(visitor);
   };
 
   visitor.move = (direction) => {
@@ -53,11 +54,10 @@ angular.module('museumApp')
     let nextRoom = visitor.location[direction];
     if(nextRoom){
       visitor.location = mapLayout[nextRoom];
-      visitor.history(visitor.location);
+      visitor.history.push(visitor.location);
       return;
     }
     visitor.pushHistory(null);
-    saveState();
   };
 
   visitor.undo = () => {
@@ -65,7 +65,8 @@ angular.module('museumApp')
     let top = visitor.history[0];
     if (top)
       visitor.location = top.location;
-    saveState();
+    saveState(visitor);
   };
+
   return visitor;
 }]);

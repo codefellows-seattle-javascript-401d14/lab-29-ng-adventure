@@ -15,7 +15,6 @@ module.exports = {
     new HTMLPlugin({template: `${__dirname}/app/index.html`}),
     new ExtractText('bundle.css'),
   ],
-
   module: {
     rules: [
       {
