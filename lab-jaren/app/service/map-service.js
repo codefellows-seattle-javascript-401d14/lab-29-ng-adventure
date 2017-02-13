@@ -78,6 +78,7 @@ angular.module('cfudApp')
   map[roomI] = {
     desc: 'the unused tables',
     east: roomC,
+    west: roomE,
     south: roomW,
   };
 
@@ -153,8 +154,7 @@ angular.module('cfudApp')
   map[roomT] = {
     desc: 'the main entryway',
     north: roomR,
-    east: roomY,
-    west: roomC,
+    west: roomY,
     south: roomU,
   };
 
@@ -174,7 +174,6 @@ angular.module('cfudApp')
     desc: 'the sunny window tables',
     north: roomI,
     east: roomJ,
-    west: roomE,
     south: roomM,
   };
 
