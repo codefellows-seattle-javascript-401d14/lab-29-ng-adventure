@@ -53,7 +53,7 @@ angular.module('museumApp')
     let nextRoom = visitor.location[direction];
     if(nextRoom){
       visitor.location = mapLayout[nextRoom];
-      visitor.history(visitor.location);
+      visitor.history.push(visitor.location);
       return;
     }
     visitor.pushHistory(null);
