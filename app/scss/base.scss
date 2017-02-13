@@ -27,20 +27,6 @@ $pad: 0.5em;
   }
 }
 
-@for $i from 6 through 1 {
-  h#{$i} {
-    color: $brand-dark;
-    font-size: 9/($i + 2)  * 1em;;
-    margin-bottom: $i/10 * 1em;
-  }
-}
-
-
-
-
-
-
-
 body {
   color: $brand-primary;
 }
