@@ -3,8 +3,6 @@
 require('./scss/base.scss');
 
 const angular = require('angular');
-
-
 angular.module('reApp', []);
 
 require('./service/map-service.js');
