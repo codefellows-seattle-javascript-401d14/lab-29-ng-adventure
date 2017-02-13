@@ -1,0 +1,11 @@
+@import "../../scss/base.scss";
+
+history {
+  width: 30%;
+  font-weight: 500;
+  @include center-text;
+  li {
+    list-style: none;
+    border-bottom: 2px solid $brand-primary;
+  }
+}
