@@ -1,0 +1,32 @@
+$brand-primary: #002F2F;
+$brand-secondary: #046380;
+
+$brand-active: #EFECCA;
+$brand-focus: #A7A37E;
+$brand-error: #E6E2AF;
+$brand-success: #C8E2AF;
+
+$brand-black: #000;
+$brand-dark: #444;
+$brand-med: #777;
+$brand-light: #fffff7;
+
+$pad: 0.5em;
+
+* {
+  position: static;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  color: $brand-primary;
+  &:focus {
+    outline: 0;
+  }
+}
+
+body {
+  color: $brand-primary;
+}
