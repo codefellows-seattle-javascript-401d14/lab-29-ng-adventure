@@ -27,7 +27,7 @@ angular.module('saltMachineApp')
   if(!player.name)
     player.name = 'slug';
   if(!player.location)
-    player.location = mapService.ROOM_A;
+    player.location = mapService.SALTROOM_A;
   if(!player.history)
     player.history = [];
 
@@ -50,7 +50,9 @@ angular.module('saltMachineApp')
   };
 
   player.move = (direction) => {
+    console.log('dir', direction);
     let nextLocation = player.location[direction];
+    console.log('nextLoc', nextLocation);
     if(nextLocation){
       player.location = mapService[nextLocation];
       player.pushHistory(player.location);
