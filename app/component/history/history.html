@@ -2,9 +2,9 @@
   <h2>history</h2>
   <button ng-click="historyCtrl.player.undo()">undo</button>
   <ol>
-    <li ng-repeat="item in historyCtrl.player.history track by item.id">
-      <p>{{ item.desc }}</p>
+    <li class"animate-repeat" ng-repeat="item in historyCtrl.player.history track by $index">
+      <p>{{ item.content }}</p>
       <button ng-click="historyCtrl.player.deleteHistory(item.id)">Delete History</button>
-    </li> 
+    </li>
   </ol>
 </div>
