@@ -1,0 +1,8 @@
+@import "../../scss/base.scss";
+
+history {
+  li {
+    list-style: none;
+    border-bottom: 2px solid $brand-primary;
+  }
+}

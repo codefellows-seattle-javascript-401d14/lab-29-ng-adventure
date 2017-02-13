@@ -1,0 +1,9 @@
+<div class="history">
+  <h2>Move History</h2>
+  <button ng-click="historyCtrl.player.undo()">Undo Move</button>
+  <ol>
+    <li ng-repeat="item in historyCtrl.player.history track by item.id">
+      <p>{{ item.desc }}</p>
+    </li>
+  </ol>
+</div>

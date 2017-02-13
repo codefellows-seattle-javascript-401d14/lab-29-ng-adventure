@@ -1,0 +1,56 @@
+$brand-black: #000;
+$brand-darkblue: #000aaa;
+$brand-white: #fff;
+$brand-beige: #B2A59B;
+$brand-orange: #FF8019;
+$brand-primary:#009AB2;
+$brand-sky:#A9F3FF;
+
+$brand-active:#a47;
+$brand-focus:#BEDD;
+$brand-error:#aAD;
+$brand-success:#FFE901;
+
+$pad: 0.7em;
+
+@mixin horizontal-center{
+  margin: 0 auto;
+}
+
+@mixin center-text {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@mixin special-pad {
+  box-sizing: border-box;
+  padding: $pad;
+}
+
+@mixin bubble {
+  box-sizing: border-box;
+  padding:$pad;
+  border: 1px thin black;
+  border-radius: 0.4em;
+}
+
+@mixin highlight {
+  background-color: $brand-success;
+  color: $brand-darkblue;
+}
+
+//reset
+// * {
+//   position: static;
+//   width:100%;
+//   margin: 0px;
+//   text-decoration: none;
+//   list-style: none;
+//   padding:0px;
+//   font-size: 1em;
+//   line-height: 1em;
+//   color: $brand-black;
+//   &:focus {
+//     outline: 0;
+//   }
+// }
