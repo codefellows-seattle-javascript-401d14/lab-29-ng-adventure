@@ -24,14 +24,14 @@ angular.module('hauntedApp')
   };
 
   map[roomB] = {
-    desc:'chamber of horrors',
+    desc:' the chamber of horrors',
     north: roomD,
     west: roomC,
     east: roomA,
   };
 
   map[roomC] = {
-    desc:'devil'/'s den',
+    desc:'the devil'/'s den',
     north: roomG,
     south: roomF,
     east: roomB,
@@ -60,14 +60,14 @@ angular.module('hauntedApp')
   };
 
   map[roomG] = {
-    desc:'room of darkness',
+    desc:'the room of darkness',
     north: roomD,
     south: roomC,
     east: roomF,
   };
 
   map[roomH] = {
-    desc:'hall of no return',
+    desc:'the hall of no return',
     south: roomF,
     west: roomA,
   };

@@ -1,7 +1,8 @@
 'use strict';
 require('./scss/base.scss');
 
-require('angular').module('hauntedApp', []);
+const angular = require('angular');
+angular.module('hauntedApp', []);
 
 require('./service/map-service.js');
 
