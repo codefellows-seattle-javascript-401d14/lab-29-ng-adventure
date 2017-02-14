@@ -53,6 +53,7 @@ angular.module('resloveAdventureApp')
       player.location = mapService[nextLocation];
       player.pushHistory(player.location);
       saveState();
+      
       return;
     }
     player.pushHistory(null);
