@@ -5,7 +5,7 @@ const uuidV1 = require('uuid/v1');
 
 angular.module('resloveAdventureApp')
 .service('playerService', [ '$window', 'mapService', function($window, mapService){
-  let saveState = (player) => {
+  let saveState = () => {
     try {
       $window.localStorage.player = JSON.stringify(player);
     } catch (e) {
@@ -29,47 +29,49 @@ angular.module('resloveAdventureApp')
     player.location = mapService.RM1;
   if(!player.history)
     player.history = [];
+
   player.pushHistory = (location) => {
-    if(location){
-      player.history.unshift({
-        location: player.location,
-        content: `${player.name} is now in ${location.title}`,
-        id: uuidV1(),
-      });
-    } else {
+    if(!location){
       player.history.unshift({
         location: player.location,
         content: `${player.name} hit a wall`,
         id: uuidV1(),
       });
+    } else {
+      player.history.unshift({
+        location:  location,
+        content: `${player.name} is now in ${location.title}`,
+        id: uuidV1(),
+      });
     }
     console.log('push history', player.history);
-    saveState(player);
+    saveState();
   };
   player.move = (direction) => {
     let nextLocation = player.location[direction];
     if(nextLocation){
       player.location = mapService[nextLocation];
       player.pushHistory(player.location);
-      saveState(player);
+      saveState();
       return;
     }
     player.pushHistory(null);
+    saveState();
   };
   player.undo = () => {
-    console.log('player.undo pressed');
+    console.log('player.undo pressed',player.undo);
     player.history.shift();
     let top = player.history[0];
     if (top)
       player.location = top.location;
-    saveState(player);
+    saveState();
   };
   player.deleteHistory = (id) => {
-    console.log('player.deleteHistory pressed');
+    console.log('player.deleteHistory pressed', player.deleteHistory);
     player.history =  player.history.filter(move => {
       return move.id != id;
     });
-    saveState(player);
+    saveState();
   };
   return player;
 }]);

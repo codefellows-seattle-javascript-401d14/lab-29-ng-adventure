@@ -21,66 +21,66 @@ angular.module('resloveAdventureApp')
   let end = 'RM14';
 
   map[start] = {
-    title: 'loren epsum',
+    title: 'Start',
     north: roomTwo,
   };
   map[roomTwo] = {
-    title: 'loren epsum',
+    title: 'Room 2',
     east: roomThree,
   };
   map[roomThree] = {
-    title: 'loren epsum',
+    title: 'Room 3',
     north: roomTen,
     south: roomFour,
     east: roomEight,
     west: roomTwo,
   };
   map[roomFour] = {
-    title: 'loren epsum',
+    title: 'Room 5',
     east: roomFive,
   };
   map[roomFive] = {
-    title: 'loren epsum',
+    title: 'Room 5',
     east: roomSix,
   };
   map[roomSix] = {
-    title: 'loren epsum',
+    title: 'Room 6',
     north: roomSeven,
   };
   map[roomSeven] = {
-    title: 'loren epsum',
+    title: 'Room 7',
     west: roomEight,
   };
   map[roomEight] = {
-    title: 'loren epsum',
+    title: 'Room 8',
     north: roomNine,
     south: roomFive,
     east: roomSeven,
     west: roomThree,
   };
   map[roomNine] = {
-    title: 'loren epsum',
+    title: 'Room 9',
     west: roomTen,
   };
   map[roomTen] = {
-    title: 'loren epsum',
+    title: 'Room 10',
     west: roomEleven,
   };
   map[roomEleven] = {
-    title: 'loren epsum',
+    title: 'Room 11',
     west: roomTwelve,
     south: roomTwo,
   };
   map[roomTwelve] = {
-    title: 'loren epsum',
+    title: 'Room 12',
     south: roomThirteen,
   };
   map[roomThirteen] = {
-    title: 'loren epsum',
+    title: 'Room 13',
     south: end,
   };
   map[end] = {
-    title: 'loren epsum',
+    title: 'The End',
   };
   return map;
 });
