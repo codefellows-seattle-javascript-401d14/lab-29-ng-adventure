@@ -1,8 +1,6 @@
 'use strict';
 
 const angular = require('angular');
-const uuidV1 = require('uuid/v1');
-
 
 angular.module('resloveAdventureApp')
 .service('mapService', function() {
@@ -23,17 +21,14 @@ angular.module('resloveAdventureApp')
   let end = 'RM14';
 
   map[start] = {
-    id: uuidV1(),
     title: 'loren epsum',
     north: roomTwo,
   };
   map[roomTwo] = {
-    id: uuidV1(),
     title: 'loren epsum',
     east: roomThree,
   };
   map[roomThree] = {
-    id: uuidV1(),
     title: 'loren epsum',
     north: roomTen,
     south: roomFour,
@@ -41,27 +36,22 @@ angular.module('resloveAdventureApp')
     west: roomTwo,
   };
   map[roomFour] = {
-    id: uuidV1(),
     title: 'loren epsum',
     east: roomFive,
   };
   map[roomFive] = {
-    id: uuidV1(),
     title: 'loren epsum',
     east: roomSix,
   };
   map[roomSix] = {
-    id: uuidV1(),
     title: 'loren epsum',
     north: roomSeven,
   };
   map[roomSeven] = {
-    id: uuidV1(),
     title: 'loren epsum',
     west: roomEight,
   };
   map[roomEight] = {
-    id: uuidV1(),
     title: 'loren epsum',
     north: roomNine,
     south: roomFive,
@@ -69,33 +59,27 @@ angular.module('resloveAdventureApp')
     west: roomThree,
   };
   map[roomNine] = {
-    id: uuidV1(),
     title: 'loren epsum',
     west: roomTen,
   };
   map[roomTen] = {
-    id: uuidV1(),
     title: 'loren epsum',
     west: roomEleven,
   };
   map[roomEleven] = {
-    id: uuidV1(),
     title: 'loren epsum',
     west: roomTwelve,
     south: roomTwo,
   };
   map[roomTwelve] = {
-    id: uuidV1(),
     title: 'loren epsum',
     south: roomThirteen,
   };
   map[roomThirteen] = {
-    id: uuidV1(),
     title: 'loren epsum',
     south: end,
   };
   map[end] = {
-    id: uuidV1(),
     title: 'loren epsum',
   };
   return map;

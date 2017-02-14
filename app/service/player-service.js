@@ -1,6 +1,7 @@
 'use strict';
 
 const angular = require('angular');
+const uuidV1 = require('uuid/v1');
 
 angular.module('resloveAdventureApp')
 .service('playerService', [ '$window', 'mapService', function($window, mapService){
@@ -31,15 +32,15 @@ angular.module('resloveAdventureApp')
   player.pushHistory = (location) => {
     if(location){
       player.history.unshift({
-        location: location,
-        content: `${player.name} is now in ${player.location.title}`,
-        id: player.location.id,
+        location: player.location,
+        content: `${player.name} is now in ${location.title}`,
+        id: uuidV1(),
       });
     } else {
       player.history.unshift({
         location: player.location,
         content: `${player.name} hit a wall`,
-        id: player.location.id,
+        id: uuidV1(),
       });
     }
     console.log('push history', player.history);
@@ -49,7 +50,7 @@ angular.module('resloveAdventureApp')
     let nextLocation = player.location[direction];
     if(nextLocation){
       player.location = mapService[nextLocation];
-      player.history.push(player.location);
+      player.pushHistory(player.location);
       saveState(player);
       return;
     }
