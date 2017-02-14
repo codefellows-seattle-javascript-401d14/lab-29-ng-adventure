@@ -12,24 +12,24 @@ module.exports = {
   plugins: [
     new ExtractText('bundle.css'),
     new HTMLPlugin({
-       template: `${__dirname}/app/index.html`,
-     }),
+      template: `${__dirname}/app/index.html`,
+    }),
   ],
   module: {
     rules: [
       {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader'
-    },
-    {
-      test: /\.html$/,
-      loader: 'html-loader',
-    },
-    {
-      test:/\.scss$/,
-      loader: ExtractText.extract(['css-loader', 'sass-loader']),
-    }
-  ],
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader',
+      },
+      {
+        test:/\.scss$/,
+        loader: ExtractText.extract(['css-loader', 'sass-loader']),
+      },
+    ],
   },
 };
