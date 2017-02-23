@@ -11,4 +11,5 @@ require('./service/player-service.js');
 require('./component/game/game.js');
 require('./component/console/console.js');
 require('./component/history/history.js');
+require('./component/lose/lose.js');
 require('./component/win/win.js');

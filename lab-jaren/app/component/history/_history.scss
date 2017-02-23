@@ -3,6 +3,11 @@
 .history {
   @include magic-bubble;
   border: 3px double $red-dark;
+  h4 {
+    margin-top: $pad;
+    margin-bottom: $pad;
+  }
+
   button {
     @include magic-bubble;
     width: 20%;

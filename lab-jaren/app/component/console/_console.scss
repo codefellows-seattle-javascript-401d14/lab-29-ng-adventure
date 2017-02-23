@@ -3,7 +3,7 @@
 .console {
   form {
     @include horizontal-center;
-    width: 50%;
+    width: 60%;
     margin-bottom: $pad;
     input {
       @include magic-bubble;
@@ -14,7 +14,7 @@
     }
     button {
       @include magic-bubble;
-      width: 45%;
+      width: 25%;
       &:active {
         color: $purple-light;
         background-color: $purple-dark;

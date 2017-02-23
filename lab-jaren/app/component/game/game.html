@@ -12,8 +12,11 @@
     There is no denying it, you are now stuck in the Upside Down.
     <br>
     Find a way to get back to the Rightside Up. Go north, south, east, or west.
+    <br>
+    If your danger level gets to high, YOU DIE!
   </p>
   <console></console>
-  <history ng-if="!(gameCtrl.player.win)"></history>
+  <history ng-if="!(gameCtrl.player.win || gameCtrl.player.dead)"></history>
   <win ng-if="gameCtrl.player.win"></win>
+  <lose ng-if="gameCtrl.player.dead"></lose>
 </div>

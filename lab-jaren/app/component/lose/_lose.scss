@@ -1,0 +1,15 @@
+@import "../../scss/base.scss";
+
+.lose {
+  @include magic-bubble;
+  border: 3px double $red-dark;
+  button {
+    @include magic-bubble;
+    width: 20%;
+    &:active {
+      color: $purple-light;
+      background-color: $purple-dark;
+      border-color: $purple-medium;
+    }
+  }
+}

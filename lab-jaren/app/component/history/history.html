@@ -1,9 +1,11 @@
 <div class="history">
   <h3>Your story so far:</h3>
+  <h4>Danger Level: {{historyCtrl.player.dangerLevel}}</h4>
   <button ng-click="historyCtrl.player.undo()">Undo!</button>
   <ol>
-    <li ng-repeat="item in historyCtrl.player.history track by item.id">
+    <li ng-repeat="item in historyCtrl.player.history track by $index">
       <p>{{ item.desc }}</p>
+      <p>{{ item.monsterDesc }}</p>
       <button ng-click="historyCtrl.player.removeMove(item.id)">delete</button>
     </li>
   </ol>
