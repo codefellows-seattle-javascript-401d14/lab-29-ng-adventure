@@ -1,0 +1,39 @@
+@import "../../scss/base.scss";
+
+.history {
+  @include magic-bubble;
+  border: 3px double $red-dark;
+  h4 {
+    margin-top: $pad;
+    margin-bottom: $pad;
+  }
+
+  button {
+    @include magic-bubble;
+    width: 20%;
+    &:active {
+      color: $purple-light;
+      background-color: $purple-dark;
+      border-color: $purple-medium;
+    }
+  }
+
+  li {
+    border: 1px solid $red-medium;
+    border-radius: 0.5em;
+    padding-right: $pad;
+    padding-left: $pad;
+    margin-top: $pad;
+    position: relative;
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 15%;
+      padding-top: 0.87em;
+      padding-bottom: 0.87em;
+      color: $black;
+      background-color: $red-medium;
+    }
+  }
+}
